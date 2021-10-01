@@ -29,3 +29,15 @@ export function whoSaidHi(): string | null {
   // getString returns a string value for a given string key.
   return storage.getString(LAST_SENDER_KEY);
 }
+var mess:string;
+
+export function mesa(me:string):void{
+	mess = me
+}
+export function rgf(): void {
+
+  const sender = context.sender;
+ 
+  logging.log(sender + " says \"Hi!\"");
+  storage.setString(LAST_SENDER_KEY, sender);
+}
